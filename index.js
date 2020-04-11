@@ -8,6 +8,15 @@ function handleClick() {
     var audio = new Audio('sounds/tom-1.mp3');
     audio.play();
 
+    soundSelection(selection)
+}
+
+document.addEventListener("keydown", function() {
+    soundSelection(event.key)
+});
+
+
+function soundSelection(selection) {
     switch (selection) {
         case "w":
             var audio = new Audio('sounds/crash.mp3');
